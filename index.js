@@ -21,7 +21,9 @@ inquirer
     .then((answers) => {
         console.log(answers)
 
-        const bandName = generateSlug(answers.length, {format: 'title'})
+        const { length, animationName } = answers
+
+        const bandName = generateSlug(length, {format: 'title'})
 
         chalkAnimation.pulse(bandName)
 
